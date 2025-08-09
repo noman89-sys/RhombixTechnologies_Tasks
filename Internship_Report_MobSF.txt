@@ -1,0 +1,42 @@
+
+Mobile Application Security Assessment Report
+Internship Domain: Cyber Security Intern
+Company: Rhombix Technologies
+Intern Name: [Muhammad |Noman]
+
+1. Introduction
+This report presents the findings of a security assessment conducted on an intentionally vulnerable mobile banking application using Mobile Security Framework (MobSF).
+The purpose of this task was to identify vulnerabilities related to insecure data storage, insecure communication, and weak authentication mechanisms in accordance with the internship requirements.
+
+2. Tools and Environment
+- Operating System: Kali Linux
+- Security Assessment Tool: Mobile Security Framework (MobSF)
+- Target Application: Insecure Banking App (test APK)
+
+3. Methodology
+3.1 Static Analysis with MobSF
+The APK file was uploaded into MobSF for automated security scanning.
+The Static Analysis Report was examined to identify:
+- Hardcoded credentials and API keys
+- Weak or outdated cryptographic algorithms
+- Unnecessary and risky Android permissions
+- Insecure coding patterns related to data handling
+
+4. Findings
+4.1 Static Analysis Results (MobSF)
+- Hardcoded Sensitive Data: API keys and fixed credentials present in source code.
+- Weak Hashing Algorithm: MD5 used for password hashing, which is insecure.
+- Over-Permissioning: Application requests permissions (SMS, contacts, location) beyond what is required for its core functionality.
+
+5. Recommendations
+- Use secure cryptographic algorithms (SHA-256 with salt for hashing, AES for encryption).
+- Remove all hardcoded credentials and API keys from the codebase.
+- Restrict permissions to only what is necessary for core functionality.
+- Follow OWASP Mobile Security Guidelines to improve overall app security posture.
+
+6. Conclusion
+The MobSF analysis revealed several vulnerabilities in the mobile banking application, primarily related to insecure data handling, weak cryptography, and excessive permissions.
+Addressing these issues will greatly enhance the application's security and reduce exposure to potential attacks.
+
+7. Attachments
+- MobSF Static Analysis Report (PDF)
